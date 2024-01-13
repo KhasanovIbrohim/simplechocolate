@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/animations.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="apple-touch-icon" type="image/png" href="./assets/images/icons/chocolate.svg" />
+    <meta name="apple-mobile-web-app-title" content="SimpleChocolate">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/icons/chocolate.svg" />
+    <link rel="mask-icon" type="image/x-icon" href="./assets/images/icons/chocolate.svg" color="#111" />
 </head>
 
 <body>
@@ -108,8 +112,92 @@
 
     <section class="ingredients" id="ingredients">
         <div class="container">
-
+            <section class="ingredients">
+                <div class="container">
+                    <div class="ingredients__wrapper">
+                        <h2 class="ingredients__head">IT ALL ADDS UP TO ONE EXCEPTIONAL <span
+                                class="ingredients__head--yellow">TASTE</span> SENSATION</h2>
+                        <p class="ingredients__text">At Simply Chocolate, we believe that the secret to exceptional
+                            chocolate is in the details. From the sourcing of the finest ingredients to the careful
+                            crafting of each individual piece, every step of our process adds up to one exceptional
+                            taste sensation.</p>
+                        <div class="ingredients__cards--wrapper">
+                            <div class="ingredients__card">
+                                <div class="ingredients__card--intro" >
+                                    <img src="./assets/images/media/ingredients1.png" alt="">
+                                    <p class="ingredients__card--text">MILK CHOCOLATE</p>
+                                </div>
+                                <div class="ingredients__card--info">
+                                    <h4 class="ingredients__card--info--title">Milk chocolate</h4>
+                                    <div class="ingredients__card--info--names">
+                                        <h5 class="ingredients__card--info--name">chocolate</h5>
+                                        <h5 class="ingredients__card--info--benefits">the benefits</h5>
+                                    </div>
+                                    <p class="ingredients__card--info--text">Milk chocolate is a solid chocolate
+                                        confectionery containing cocoa, sugar and milk. It is the most consumed type of
+                                        chocolate. Chocolate was originally sold and consumed as a beverage in
+                                        pre-Columbian times. Although four-fifths of all milk chocolate is sold in the
+                                        United States and Europe.</p>
+                                </div>
+                            </div>
+                            <div class="ingredients__card">
+                                <div class="ingredients__card--intro--white">
+                                    <img src="./assets/images/media/ingredients2.png" alt="">
+                                    <p class="ingredients__card--text--black">MILK</p>
+                                </div>
+                                <div class="ingredients__card--info">
+                                    <h4 class="ingredients__card--info--title">Milk</h4>
+                                    <div class="ingredients__card--info--names">
+                                        <h5 class="ingredients__card--info--name">milk</h5>
+                                        <h5 class="ingredients__card--info--benefits">the benefits</h5>
+                                    </div>
+                                    <p class="ingredients__card--info--text">Milk is a white liquid food produced by the
+                                        mammary glands of mammals. It is the primary source of nutrition for young
+                                        mammals (including breastfed human infants) before they are able to digest solid
+                                        food.Early-lactation milk, which is called colostrum.</p>
+                                </div>
+                            </div>
+                            <div class="ingredients__card">
+                                <div class="ingredients__card--intro--black">
+                                    <img src="./assets/images/media/ingredients3.png" alt="">
+                                    <p class="ingredients__card--text">NUTS</p>
+                                </div>
+                                <div class="ingredients__card--info">
+                                    <h4 class="ingredients__card--info--title">NUTS</h4>
+                                    <div class="ingredients__card--info--names">
+                                        <h5 class="ingredients__card--info--name">nuts</h5>
+                                        <h5 class="ingredients__card--info--benefits">the benefits</h5>
+                                    </div>
+                                    <p class="ingredients__card--info--text">Almonds, pistachios, and walnuts are some
+                                        types of nuts that contain healthy nutrients. When eaten as part of a
+                                        nutrient-dense diet, these 9 nuts may offer benefits such as reducing your risk
+                                        of heart disease. They're a good source of fiber, healthy fats, and plant
+                                        protein.</p>
+                                </div>
+                            </div>
+                            <div class="ingredients__card">
+                                <div class="ingredients__card--intro--white">
+                                    <img src="./assets/images/media/ingredients4.png" alt="">
+                                    <p class="ingredients__card--text--black">SEMI - SWEET CHOCOLATE</p>
+                                </div>
+                                <div class="ingredients__card--info">
+                                    <h4 class="ingredients__card--info--title">semi - sweet chocolate</h4>
+                                    <div class="ingredients__card--info--names">
+                                        <h5 class="ingredients__card--info--name">sweet chocolate</h5>
+                                        <h5 class="ingredients__card--info--benefits">the benefits</h5>
+                                    </div>
+                                    <p class="ingredients__card--info--text">Semi-sweet chocolate has a cocoa solid
+                                        content of 35 to 65%. One of the best ways to gain an understanding of this type
+                                        of chocolate is to compare it to a different type of chocolate. Semisweet is
+                                        darker than milk chocolate.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
+    </section>
+    </div>
     </section>
 
     <section class="made" id="made">
@@ -124,55 +212,55 @@
                 <h1 class="products__wrapper__title">OUR <span>PRODUCTS</span></h1>
                 <div class="products__wrapper__cards">
                     <div class="products__wrapper__carousel first__corousel">
-                        <div class="products__wrapper__carousel__box">
+                        <div class="products__wrapper__carousel__box" id="product__1">
                             <img src="./assets/images/media/products1.png" alt="chocolate_image">
                             <h1>ORANGE</h1>
                             <p>Dark chocolate</p>
-                            <button>10.99$</button>
+                            <button id="openOrderModalBtn" value="1">10.99$</button>
                         </div>
-                        <div class="products__wrapper__carousel__box">
+                        <div class="products__wrapper__carousel__box" id="product__2">
                             <img src="./assets/images/media/products2.png" alt="chocolate_image">
                             <h1>APPLE&CRANBERRY</h1>
                             <p>Milk chocolate</p>
-                            <button>12.99$</button>
+                            <button id="openOrderModalBtn" value="2">12.99$</button>
                         </div>
-                        <div class="products__wrapper__carousel__box">
+                        <div class="products__wrapper__carousel__box" id="product__3">
                             <img src="./assets/images/media/products3.png" alt="chocolate_image">
                             <h1>LIME&SEA SALT</h1>
                             <p>Dark chocolate</p>
-                            <button>14.99$</button>
+                            <button id="openOrderModalBtn" value="3">14.99$</button>
                         </div>
-                        <div class="products__wrapper__carousel__box">
+                        <div class="products__wrapper__carousel__box" id="product__4">
                             <img src="./assets/images/media/products4.png" alt="chocolate_image">
                             <h1>PINEAPPLE</h1>
                             <p>Dark chocolate</p>
-                            <button>15.99$</button>
+                            <button id="openOrderModalBtn" value="4">15.99$</button>
                         </div>
                     </div>
                     <div class="products__wrapper__carousel second__corousel">
-                        <div class="products__wrapper__carousel__box">
+                        <div class="products__wrapper__carousel__box" id="product__5">
                             <img src="./assets/images/media/products5.png" alt="chocolate_image">
                             <h1>CLASSIC</h1>
                             <p>Milk chocolate</p>
-                            <button>10.99$</button>
+                            <button id="openOrderModalBtn" value="5">10.99$</button>
                         </div>
-                        <div class="products__wrapper__carousel__box">
+                        <div class="products__wrapper__carousel__box" id="product__6">
                             <img src="./assets/images/media/products6.png" alt="chocolate_image">
                             <h1>HONEY</h1>
                             <p>Milk chocolate</p>
-                            <button>12.99$</button>
+                            <button id="openOrderModalBtn" value="6">12.99$</button>
                         </div>
-                        <div class="products__wrapper__carousel__box">
+                        <div class="products__wrapper__carousel__box" id="product__7">
                             <img src="./assets/images/media/products7.png" alt="chocolate_image">
                             <h1>ROASTED FRUITS</h1>
                             <p>Dark chocolate</p>
-                            <button>12.99$</button>
+                            <button id="openOrderModalBtn" value="7">12.99$</button>
                         </div>
-                        <div class="products__wrapper__carousel__box">
+                        <div class="products__wrapper__carousel__box" id="product__8">
                             <img src="./assets/images/media/products8.png" alt="chocolate_image">
                             <h1>CLASSIC</h1>
                             <p>White chocolate</p>
-                            <button>14.99$</button>
+                            <button id="openOrderModalBtn" value="8">14.99$</button>
                         </div>
                     </div>
                 </div>
@@ -206,7 +294,30 @@
 
     <section class="reviews" id="reviews">
         <div class="container">
-
+            <div class="reviews__wrapper">
+                <h1 class="reviews__wrapper__title"><span>chocolate</span> is loved</h1>
+                <div class="reviews__wrapper__cards">
+                    <div>
+                        <img class="reviews__wrapper__cards__img" src="./assets/images/media/review1.png" alt="review">
+                        <h1 class="reviews__wrapper__cards__title">Victoria Dobrzhanska</h1>
+                        <p class="reviews__wrapper__cards__text">I love this chocolate bar. Perfect combination of light
+                            crispy wafer, covered in a thin layer chocolate.</p>
+                    </div>
+                    <div>
+                        <img class="reviews__wrapper__cards__img" src="./assets/images/media/review2.png" alt="review">
+                        <h1 class="reviews__wrapper__cards__title">Nazar Babenko</h1>
+                        <p class="reviews__wrapper__cards__text">This chocolate confection is a delight! A delight! The
+                            wafer is light and crisp, the hazelnut cream is smooth, and the chocolate is good.</p>
+                    </div>
+                    <div>
+                        <img class="reviews__wrapper__cards__img" src="./assets/images/media/review3.png" alt="review">
+                        <h1 class="reviews__wrapper__cards__title">Olena Kampusch</h1>
+                        <p class="reviews__wrapper__cards__text">Chocolate is a family favourite treat. Love the
+                            delicious smooth chocolate and the creaminess inside. The wafer is soft but crunchy.</p>
+                    </div>
+                </div>
+                <button class="reviews__wrapper__button">Leave a review</button>
+            </div>
         </div>
     </section>
 
@@ -217,7 +328,7 @@
                 <p>From the velvety texture to the rich and complex flavor, our New <br> Chocolate is a true indulgence
                     that will leave you craving more. Made <br> with only the finest ingredients and handcrafted with
                     the utmost <br> care, each piece is a work of art that is sure to please.</p>
-                <button>Subscribe</button>
+                <button id="openSubscribeModal">Subscribe</button>
             </div>
         </div>
     </section>
@@ -259,6 +370,52 @@
             </div>
         </div>
     </footer>
+
+    <div id="order__modal" class="order__modal">
+        <div class="order__media">
+            <div class="order__media__left">
+                <h1 class="order__media__title"><span>bUY </span>nOW</h1>
+                <form>
+                    <h1>Personal information</h1>
+                    <label>
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Surname">
+                    </label>
+                    <h1>Email</h1>
+                    <input type="text" placeholder="Enter your email">
+                    <h1>Phone number</h1>
+                    <input type="text" placeholder="Phone number">
+                    <h1>Card number</h1>
+                    <input type="text" placeholder="Enter card">
+                    <button>Submit</button>
+                </form>
+            </div>
+            <div class="order__media__right">
+                <div class="closeOrderModalBtn">
+                    <button id="closeOrderModalBtn">&times;</button>
+                </div>
+                <img id="order__total__image" src="" alt="image">
+                <h1 id="order__total__title"></h1>
+                <p id="order__total__desc"></p>
+                <p id="order__total__price"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="subscribe__modal" class="subscribe__modal">
+        <div class="subsctibe__media">
+            <div class="subsctibe__media__top">
+                <button id="closeSubscribeModal"><img src="./assets/images/icons/x-close.svg" alt=""></button>
+            </div>
+            <div class="subsctibe__media__bottom">
+                <h1>Explore our <br> <span>new chocolate</span> first!</h1>
+                <form>
+                    <input type="text" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>

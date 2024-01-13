@@ -5,3 +5,11 @@
         opacity: 1;
     }
 }
+
+@keyframes pop {
+    from {
+        transform: scale(0.1);
+    } to {
+        transform: scale(1);
+    }
+}
