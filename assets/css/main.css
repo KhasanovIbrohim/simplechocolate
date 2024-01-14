@@ -528,7 +528,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 10
     font-family: Montserrat;
 }
 
-.first__corousel {
+#first__corousel {
     display: flex;
     width: 101%;
     justify-content: space-between;
@@ -536,7 +536,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 10
     animation: fade 0.5s ease;
 }
 
-.second__corousel {
+#second__corousel {
     display: flex;
     width: 101%;
     justify-content: space-between;
@@ -621,11 +621,11 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 10
     transition: transform 0.5s ease-in-out;
 }
 
-.first__corousel {
+#first__corousel {
     display: flex;
 }
 
-.second__corousel {
+#second__corousel {
     display: none;
 }
 
