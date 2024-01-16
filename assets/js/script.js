@@ -1,3 +1,6 @@
+var alert = document.getElementById("alert")
+var alertText = document.getElementById("alert_text")
+
 var productsWrapperNext = document.querySelector(".products__wrapper__next__button")
 var productsWrapperPrev = document.querySelector(".products__wrapper__prev__button")
 
@@ -26,9 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let current = 0;
 var productsWrapperRender = document.querySelector(".products__wrapper__cards")
+var orderForm = document.getElementById("order_form")
+
+var urlServer = 'https://simplechocolatebackend.onrender.com'
 
 try {
-    fetch('https://simplechocolatebackend.onrender.com/products')
+    fetch(urlServer + "/products")
         .then(res => res.json())
         .then(data => {
             let carousel1 = document.createElement("div")
@@ -47,7 +53,6 @@ try {
                 title.textContent = data[i].name
                 text.textContent = data[i].description
                 button.textContent = data[i].price
-                button.value = data[i].id
 
                 card.appendChild(img)
                 card.appendChild(title)
@@ -60,9 +65,12 @@ try {
                     var orderTotalTitle = document.getElementById("order__total__title")
                     var orderTotalDesc = document.getElementById("order__total__desc")
                     var orderTotalPrice = document.getElementById("order__total__price")
+                    var orderTotalButton = document.getElementById("order_submit_button")
+
+                    orderTotalButton.value = data[i].id
 
                     orderModal.style.display = "flex"
-
+                    
                     orderTotalImage.setAttribute('src', data[i].image);
                     orderTotalTitle.textContent = data[i].name
                     orderTotalDesc.textContent = data[i].description
@@ -100,6 +108,9 @@ try {
                     var orderTotalTitle = document.getElementById("order__total__title")
                     var orderTotalDesc = document.getElementById("order__total__desc")
                     var orderTotalPrice = document.getElementById("order__total__price")
+                    var orderTotalButton = document.getElementById("order_submit_button")
+
+                    orderTotalButton.value = data[i].id
 
                     orderModal.style.display = "flex"
 
@@ -138,3 +149,56 @@ try {
 } catch (e) {
     console.error(e.message)
 }
+
+orderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nameValue = document.getElementById('order_name').value;
+    const surnameValue = document.getElementById('order_surname').value;
+    const emailValue = document.getElementById('order_email').value;
+    const phoneValue = document.getElementById('order_phone').value;
+    const cardValue = document.getElementById('order_card').value;
+    const orderButton = document.getElementById("order_submit_button")
+
+    const alert = document.querySelector("#alert")
+    const alertText = document.querySelector("#alert_text")
+
+    try {
+        fetch(urlServer + "/order", {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "id": orderButton.value,
+                "name": nameValue,
+                "surname": surnameValue,
+                "email": emailValue,
+                "phone": phoneValue,
+                "card": cardValue
+            })
+          })
+          .then(data => data.json())
+          .then(data => {
+            if(data.isSuccess){
+                alert.style.display = "block"
+                alertText.textContent = "Your order is confirmed. A consultant will be in touch shortly."
+                setTimeout(() => {
+                    alert.style.display = "none"
+                    orderModal.style.display = "none"
+                }, 5000)
+            }else {
+                alert.style.display = "block"
+                alertText.textContent = "Something went wrong try again later."
+                setTimeout(() => {
+                    alert.style.display = "none"
+                    orderModal.style.display = "none"
+                }, 5000)
+            }
+          })
+      } catch (e) {
+        console.error(e.message)
+      }
+
+})
